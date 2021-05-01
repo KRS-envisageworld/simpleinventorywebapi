@@ -1,0 +1,1322 @@
+{
+	"info": {
+		"_postman_id": "51ea81c6-c8d2-41a0-a9c9-7a40e35ce473",
+		"name": "Inventory Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "All categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44353/api/category/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44353",
+							"path": [
+								"api",
+								"category",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "All categories",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44353/api/category/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44353",
+									"path": [
+										"api",
+										"category",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?QzpcUHJvamVjdHNcSW52ZW50b3J5XEludmVudG9yeU1hbmFnZW1lbnRcYXBpXGNhdGVnb3J5XA==?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 May 2021 14:23:50 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "137"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"category\": [\n        {\n            \"moniker\": \"CAT123AB\",\n            \"name\": \"Category 1\",\n            \"items\": []\n        },\n        {\n            \"moniker\": \"CAT122BA\",\n            \"name\": \"Category 2\",\n            \"items\": []\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "All categories with items included",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44353/api/category?includeItems=true",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44353",
+							"path": [
+								"api",
+								"category"
+							],
+							"query": [
+								{
+									"key": "includeItems",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "All categories with items included",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44353/api/category?includeItems=true",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44353",
+									"path": [
+										"api",
+										"category"
+									],
+									"query": [
+										{
+											"key": "includeItems",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?QzpcUHJvamVjdHNcSW52ZW50b3J5XEludmVudG9yeU1hbmFnZW1lbnRcYXBpXGNhdGVnb3J5?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 May 2021 14:24:24 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "594"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"category\": [\n        {\n            \"moniker\": \"CAT123AB\",\n            \"name\": \"Category 1\",\n            \"items\": [\n                {\n                    \"moniker\": \"ITM111AB\",\n                    \"name\": \"Item 1\",\n                    \"description\": \"This is for demo only.\",\n                    \"price\": 500,\n                    \"availableQuantity\": 10\n                },\n                {\n                    \"moniker\": \"ITM122BC\",\n                    \"name\": \"Item 2\",\n                    \"description\": \"This is for demo only.\",\n                    \"price\": 45,\n                    \"availableQuantity\": 10\n                }\n            ]\n        },\n        {\n            \"moniker\": \"CAT122BA\",\n            \"name\": \"Category 2\",\n            \"items\": [\n                {\n                    \"moniker\": \"ITM333AC\",\n                    \"name\": \"Item 3\",\n                    \"description\": \"This is for demo only.\",\n                    \"price\": 100,\n                    \"availableQuantity\": 10\n                },\n                {\n                    \"moniker\": \"ITM444BC\",\n                    \"name\": \"Item 4\",\n                    \"description\": \"This is for demo only.\",\n                    \"price\": 200,\n                    \"availableQuantity\": 10\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Particular category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44353/api/category/CAT123AB",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44353",
+							"path": [
+								"api",
+								"category",
+								"CAT123AB"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Particular category",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44353/api/category/CAT123AB",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44353",
+									"path": [
+										"api",
+										"category",
+										"CAT123AB"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?QzpcUHJvamVjdHNcSW52ZW50b3J5XEludmVudG9yeU1hbmFnZW1lbnRcYXBpXGNhdGVnb3J5XENBVDEyM0FC?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 May 2021 14:24:35 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "81"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"category\": {\n        \"moniker\": \"CAT123AB\",\n        \"name\": \"Category 1\",\n        \"items\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Particular category with items included",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44353/api/category/CAT123AB?includeItems=true",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44353",
+							"path": [
+								"api",
+								"category",
+								"CAT123AB"
+							],
+							"query": [
+								{
+									"key": "includeItems",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Particular category with items included",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44353/api/category/CAT123AB?includeItems=true",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44353",
+									"path": [
+										"api",
+										"category",
+										"CAT123AB"
+									],
+									"query": [
+										{
+											"key": "includeItems",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?QzpcUHJvamVjdHNcSW52ZW50b3J5XEludmVudG9yeU1hbmFnZW1lbnRcYXBpXGNhdGVnb3J5XENBVDEyM0FC?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 May 2021 14:24:42 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "309"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"category\": {\n        \"moniker\": \"CAT123AB\",\n        \"name\": \"Category 1\",\n        \"items\": [\n            {\n                \"moniker\": \"ITM111AB\",\n                \"name\": \"Item 1\",\n                \"description\": \"This is for demo only.\",\n                \"price\": 500,\n                \"availableQuantity\": 10\n            },\n            {\n                \"moniker\": \"ITM122BC\",\n                \"name\": \"Item 2\",\n                \"description\": \"This is for demo only.\",\n                \"price\": 45,\n                \"availableQuantity\": 10\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Add new category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"moniker\": \"CAT123Ao\",\r\n    \"name\": \"Category 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44353/api/category",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44353",
+							"path": [
+								"api",
+								"category"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add new category",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"moniker\": \"CAT123Ao\",\r\n    \"name\": \"Category 1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44353/api/category",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44353",
+									"path": [
+										"api",
+										"category"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Location",
+									"value": "https://localhost:44353/api/category/CAT123AO?IncludeItems=False"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?QzpcUHJvamVjdHNcSW52ZW50b3J5XEludmVudG9yeU1hbmFnZW1lbnRcYXBpXGNhdGVnb3J5?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 May 2021 14:29:30 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "53"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"moniker\": \"CAT123AO\",\n    \"name\": \"Category 1\",\n    \"items\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Update the category",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"moniker\": \"CAT122BA\",\r\n        \"name\": \"Category test\",\r\n        \"items\": [\r\n            {\r\n                \"moniker\": \"ITM999AT\",\r\n                \"name\": \"Demo item\",\r\n                \"description\": \"This item has modified\",\r\n                \"price\": 500.0,\r\n                \"availableQuantity\": 60\r\n            },\r\n            {\r\n                \"moniker\": \"ITM909AQ\",\r\n                \"name\": \"Demo item 1\",\r\n                \"description\": \"This item has modified\",\r\n                \"price\": 100.0,\r\n                \"availableQuantity\": 12\r\n            }\r\n        ]\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44353/api/category/CAT122BA",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44353",
+							"path": [
+								"api",
+								"category",
+								"CAT122BA"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update the category",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"moniker\": \"CAT122BA\",\r\n        \"name\": \"Category test\",\r\n        \"items\": [\r\n            {\r\n                \"moniker\": \"ITM999AT\",\r\n                \"name\": \"Demo item\",\r\n                \"description\": \"This item has modified\",\r\n                \"price\": 500.0,\r\n                \"availableQuantity\": 60\r\n            },\r\n            {\r\n                \"moniker\": \"ITM909AQ\",\r\n                \"name\": \"Demo item 1\",\r\n                \"description\": \"This item has modified\",\r\n                \"price\": 100.0,\r\n                \"availableQuantity\": 12\r\n            }\r\n        ]\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44353/api/category/CAT122BA",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44353",
+									"path": [
+										"api",
+										"category",
+										"CAT122BA"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?QzpcUHJvamVjdHNcSW52ZW50b3J5XEludmVudG9yeU1hbmFnZW1lbnRcYXBpXGNhdGVnb3J5XENBVDEyMkJB?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 May 2021 14:31:53 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "551"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"category\": {\n        \"moniker\": \"CAT122BA\",\n        \"name\": \"Category test\",\n        \"items\": [\n            {\n                \"moniker\": \"ITM333AC\",\n                \"name\": \"Item 3\",\n                \"description\": \"This is for demo only.\",\n                \"price\": 100,\n                \"availableQuantity\": 10\n            },\n            {\n                \"moniker\": \"ITM444BC\",\n                \"name\": \"Item 4\",\n                \"description\": \"This is for demo only.\",\n                \"price\": 200,\n                \"availableQuantity\": 10\n            },\n            {\n                \"moniker\": \"ITM999AT\",\n                \"name\": \"Demo item\",\n                \"description\": \"This item has modified\",\n                \"price\": 500,\n                \"availableQuantity\": 60\n            },\n            {\n                \"moniker\": \"ITM909AQ\",\n                \"name\": \"Demo item 1\",\n                \"description\": \"This item has modified\",\n                \"price\": 100,\n                \"availableQuantity\": 12\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete category forcefully",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:44353/api/category/CAT123AB?forcefully=true",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44353",
+							"path": [
+								"api",
+								"category",
+								"CAT123AB"
+							],
+							"query": [
+								{
+									"key": "forcefully",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete category forcefully",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://localhost:44353/api/category/CAT123AB?forcefully=true",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44353",
+									"path": [
+										"api",
+										"category",
+										"CAT123AB"
+									],
+									"query": [
+										{
+											"key": "forcefully",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?QzpcUHJvamVjdHNcSW52ZW50b3J5XEludmVudG9yeU1hbmFnZW1lbnRcYXBpXGNhdGVnb3J5XENBVDEyM0FC?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 May 2021 14:32:43 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "71"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Category has been removed from the system.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete category ",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:44353/api/category/CAT123AB",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44353",
+							"path": [
+								"api",
+								"category",
+								"CAT123AB"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete category ",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://localhost:44353/api/category/CAT123AB",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44353",
+									"path": [
+										"api",
+										"category",
+										"CAT123AB"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?QzpcUHJvamVjdHNcSW52ZW50b3J5XEludmVudG9yeU1hbmFnZW1lbnRcYXBpXGNhdGVnb3J5XENBVDEyM0FC?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 May 2021 14:32:28 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "78"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"message\": \"This category cann't be deleted as it has items.\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Items",
+			"item": [
+				{
+					"name": "All items of the category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44353/api/category/CAT122BA/items",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44353",
+							"path": [
+								"api",
+								"category",
+								"CAT122BA",
+								"items"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "All items of the category",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44353/api/category/CAT122BA/items",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44353",
+									"path": [
+										"api",
+										"category",
+										"CAT122BA",
+										"items"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?QzpcUHJvamVjdHNcSW52ZW50b3J5XEludmVudG9yeU1hbmFnZW1lbnRcYXBpXGNhdGVnb3J5XENBVDEyMkJBXGl0ZW1z?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 May 2021 14:33:02 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "494"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"items\": [\n        {\n            \"moniker\": \"ITM333AC\",\n            \"name\": \"Item 3\",\n            \"description\": \"This is for demo only.\",\n            \"price\": 100,\n            \"availableQuantity\": 10\n        },\n        {\n            \"moniker\": \"ITM444BC\",\n            \"name\": \"Item 4\",\n            \"description\": \"This is for demo only.\",\n            \"price\": 200,\n            \"availableQuantity\": 10\n        },\n        {\n            \"moniker\": \"ITM999AT\",\n            \"name\": \"Demo item\",\n            \"description\": \"This item has modified\",\n            \"price\": 500,\n            \"availableQuantity\": 60\n        },\n        {\n            \"moniker\": \"ITM909AQ\",\n            \"name\": \"Demo item 1\",\n            \"description\": \"This item has modified\",\n            \"price\": 100,\n            \"availableQuantity\": 12\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Partlicular item ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44353/api/category/CAT122BA/items/ITM444BC",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44353",
+							"path": [
+								"api",
+								"category",
+								"CAT122BA",
+								"items",
+								"ITM444BC"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Partlicular item ",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44353/api/category/CAT122BA/items/ITM444BC",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44353",
+									"path": [
+										"api",
+										"category",
+										"CAT122BA",
+										"items",
+										"ITM444BC"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?QzpcUHJvamVjdHNcSW52ZW50b3J5XEludmVudG9yeU1hbmFnZW1lbnRcYXBpXGNhdGVnb3J5XENBVDEyMkJBXGl0ZW1zXElUTTQ0NEJD?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 May 2021 14:33:14 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "139"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"items\": {\n        \"moniker\": \"ITM444BC\",\n        \"name\": \"Item 4\",\n        \"description\": \"This is for demo only.\",\n        \"price\": 200,\n        \"availableQuantity\": 10\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Add Item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"moniker\": \"ITM444RT\",\r\n        \"name\": \"Item 10\",\r\n        \"description\": \"This is for demo only.\",\r\n        \"price\": 788.895,\r\n        \"availableQuantity\": 25\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44353/api/category/CAT122BA/items/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44353",
+							"path": [
+								"api",
+								"category",
+								"CAT122BA",
+								"items",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Item",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"moniker\": \"ITM444RT\",\r\n        \"name\": \"Item 10\",\r\n        \"description\": \"This is for demo only.\",\r\n        \"price\": 788.895,\r\n        \"availableQuantity\": 25\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44353/api/category/CAT122BA/items/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44353",
+									"path": [
+										"api",
+										"category",
+										"CAT122BA",
+										"items",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Location",
+									"value": "https://localhost:44353/api/category/CAT122BA/Items"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?QzpcUHJvamVjdHNcSW52ZW50b3J5XEludmVudG9yeU1hbmFnZW1lbnRcYXBpXGNhdGVnb3J5XENBVDEyMkJBXGl0ZW1zXA==?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 May 2021 14:34:26 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "115"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"moniker\": \"ITM444RT\",\n    \"name\": \"Item 10\",\n    \"description\": \"This is for demo only.\",\n    \"price\": 788.9,\n    \"availableQuantity\": 25\n}"
+						}
+					]
+				},
+				{
+					"name": "Update item",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"moniker\": \"ITM444WT\",\r\n    \"name\": \"Item 144\",\r\n    \"description\": \"This is for demo only.\",\r\n    \"price\": 625.254,\r\n    \"availableQuantity\": 25\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44353/api/category/CAT122BA/items/ITM444WT",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44353",
+							"path": [
+								"api",
+								"category",
+								"CAT122BA",
+								"items",
+								"ITM444WT"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update item",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"moniker\": \"ITM444TI\",\r\n    \"name\": \"Item 144\",\r\n    \"description\": \"This is for demo only.\",\r\n    \"price\": 625.254,\r\n    \"availableQuantity\": 25\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44353/api/category/CAT122BA/items/ITM444TR",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44353",
+									"path": [
+										"api",
+										"category",
+										"CAT122BA",
+										"items",
+										"ITM444TR"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?QzpcUHJvamVjdHNcSW52ZW50b3J5XEludmVudG9yeU1hbmFnZW1lbnRcYXBpXGNhdGVnb3J5XENBVDEyMkJBXEl0ZW1z?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 May 2021 14:50:40 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "497"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"items\": [\n        {\n            \"moniker\": \"ITM333AC\",\n            \"name\": \"Item 3\",\n            \"description\": \"This is for demo only.\",\n            \"price\": 100,\n            \"availableQuantity\": 10\n        },\n        {\n            \"moniker\": \"ITM444TI\",\n            \"name\": \"Item 144\",\n            \"description\": \"This is for demo only.\",\n            \"price\": 625.25,\n            \"availableQuantity\": 25\n        },\n        {\n            \"moniker\": \"ITM999AT\",\n            \"name\": \"Demo item\",\n            \"description\": \"This item has modified\",\n            \"price\": 500,\n            \"availableQuantity\": 60\n        },\n        {\n            \"moniker\": \"ITM909AQ\",\n            \"name\": \"Demo item 1\",\n            \"description\": \"This item has modified\",\n            \"price\": 100,\n            \"availableQuantity\": 12\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Remove item",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44353/api/category/CAT122BA/items/ITM444TI",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44353",
+							"path": [
+								"api",
+								"category",
+								"CAT122BA",
+								"items",
+								"ITM444TI"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Remove item",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44353/api/category/CAT122BA/items/ITM444TI",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44353",
+									"path": [
+										"api",
+										"category",
+										"CAT122BA",
+										"items",
+										"ITM444TI"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?QzpcUHJvamVjdHNcSW52ZW50b3J5XEludmVudG9yeU1hbmFnZW1lbnRcYXBpXGNhdGVnb3J5XENBVDEyMkJBXEl0ZW1z?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 May 2021 14:52:06 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "264"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"items\": [\n        {\n            \"moniker\": \"ITM999AT\",\n            \"name\": \"Demo item\",\n            \"description\": \"This item has modified\",\n            \"price\": 500,\n            \"availableQuantity\": 60\n        },\n        {\n            \"moniker\": \"ITM909AQ\",\n            \"name\": \"Demo item 1\",\n            \"description\": \"This item has modified\",\n            \"price\": 100,\n            \"availableQuantity\": 12\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
