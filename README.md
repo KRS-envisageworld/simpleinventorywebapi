@@ -51,7 +51,7 @@ Models are something that, user will required when he needs to add or modify som
 | :---         | :--- |
 |200 (OK) | The API call excecuted successfully. |
 |201 (Created) | Record has been created successfully. In Response header user can get the location of created record by `Location` attribute |
-|400 (OK) | Request contains unsual data. |
+|400 (Bad Request) | Request contains unsual data. |
 |405 (Method Not allowed) | The request resource or method doesn't exist |
 |500 (Internal Server Error) | Error occured while executing the request. |
  
