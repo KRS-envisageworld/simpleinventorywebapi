@@ -79,7 +79,7 @@ Models are something that, user will required when he needs to add or modify som
     "stackTrace": error detail
 }
 ```
-## URL Format
+## URL Formats
 
 **Category**
 ##### `GET`
