@@ -120,7 +120,7 @@ Models are something that, user will required when he needs to add or modify som
 ```
 ## Sample 
 
-Here, few examples with the Request and Response. If you need more examples then you can download the JSON file of Postman [Click to view] () and can use it for demo by importing to your local. It includes the examples also.
+Here, few examples with the Request and Response. If you need more examples then you can download the JSON file of Postman [Click to view](/documents/Documents/Inventory%20Management.postman_collection.json) and can use it for demo by importing to your local. It includes the examples also.
 
 ##### `GET` Categories with items
 ##### **Request**
